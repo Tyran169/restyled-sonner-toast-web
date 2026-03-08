@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { metadata } from './metadata';
+import { preLoadResources, rootMetadata } from './metadata';
 import { ThemeProvider } from '@/providers/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 
@@ -14,13 +14,15 @@ const geistMono = Geist_Mono({
   subsets: ['latin']
 });
 
-export { metadata };
+export const metadata = rootMetadata;
 
 export default function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  preLoadResources();
+
   return (
     <html
       lang="en"

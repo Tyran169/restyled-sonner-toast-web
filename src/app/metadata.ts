@@ -1,10 +1,9 @@
 import { Metadata } from 'next';
-
-type Icon = Extract<Metadata['icons'], unknown[]>[number];
+import { preload } from 'react-dom';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
-export const metadata: Metadata = {
+export const rootMetadata: Metadata = {
   title: 'Restyled Sonner Toast',
   description: "Minor CSS overrides to refine Sonner's default toast styles.",
   metadataBase: new URL(SITE_URL),
@@ -42,13 +41,6 @@ export const metadata: Metadata = {
     ]
   },
   icons: [
-    {
-      rel: 'preload',
-      url: '/logos/logo.webp',
-      as: 'image',
-      type: 'image/webp',
-      fetchPriority: 'high'
-    } as Icon,
     {
       rel: 'icon',
       url: '/logos/favicon.ico',
@@ -99,3 +91,11 @@ export const metadata: Metadata = {
     }
   ]
 };
+
+export function preLoadResources() {
+  preload('/logos/logo.webp', {
+    as: 'image',
+    type: 'image/webp',
+    fetchPriority: 'high'
+  });
+}

@@ -14,9 +14,8 @@ export default function Logo({ className, width, height }: LogoProps) {
       className={className}
       width={width}
       height={height}
-      loading="eager"
       fetchPriority="high"
-      decoding="async"
+      loading="eager"
     />
   );
 }
