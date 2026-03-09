@@ -49,7 +49,7 @@ const eslintConfig = defineConfig([
           semi: true,
           trailingComma: 'none',
           tabWidth: 2,
-          endOfLine: 'crlf',
+          endOfLine: 'lf',
           useTabs: false,
           singleQuote: true,
           printWidth: 80

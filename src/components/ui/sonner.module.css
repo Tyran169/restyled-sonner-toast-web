@@ -1,0 +1,250 @@
+/* ----- Global Variable Declarations ----- */
+
+.toaster,
+.toaster[data-sonner-theme='light'],
+.toaster[data-sonner-theme='dark'] .toast[data-invert='true'] {
+  --normal-re-bg: hsl(0, 0%, 100%);
+  --normal-re-border: hsl(0, 0%, 89.8%);
+  --normal-re-text: hsl(0, 0%, 4%);
+
+  --success-re-bg: hsl(143, 85%, 96%);
+  --success-re-border: hsl(145, 92%, 87%);
+  --success-re-text: hsl(140, 100%, 27%);
+
+  --info-re-bg: hsl(208, 100%, 97%);
+  --info-re-border: hsl(221, 91%, 93%);
+  --info-re-text: hsl(210, 92%, 45%);
+
+  --warning-re-bg: hsl(49, 100%, 97%);
+  --warning-re-border: hsl(49, 91%, 84%);
+  --warning-re-text: hsl(31, 92%, 45%);
+
+  --error-re-bg: hsl(359, 100%, 97%);
+  --error-re-border: hsl(359, 100%, 94%);
+  --error-re-text: hsl(360, 100%, 45%);
+}
+
+.toaster[data-sonner-theme='dark'],
+.toaster[data-sonner-theme='light'] .toast[data-invert='true'] {
+  --normal-re-bg: hsl(0, 0%, 8%);
+  --normal-re-border: hsl(0, 0%, 17%);
+  --normal-re-text: hsl(0, 0%, 98%);
+
+  --success-re-bg: hsl(150, 100%, 6%);
+  --success-re-border: hsl(147, 100%, 12%);
+  --success-re-text: hsl(150, 86%, 65%);
+
+  --info-re-bg: hsl(215, 100%, 6%);
+  --info-re-border: hsl(223, 43%, 17%);
+  --info-re-text: hsl(216, 87%, 65%);
+
+  --warning-re-bg: hsl(64, 100%, 6%);
+  --warning-re-border: hsl(60, 100%, 9%);
+  --warning-re-text: hsl(46, 87%, 65%);
+
+  --error-re-bg: hsl(358, 76%, 10%);
+  --error-re-border: hsl(357, 89%, 16%);
+  --error-re-text: hsl(358, 100%, 81%);
+}
+
+.toaster .toast {
+  --toast-text: var(--normal-re-text);
+  --toast-bg: var(--normal-re-bg);
+  --toast-border: var(--normal-re-border);
+}
+
+.toaster .toast[data-rich-colors='true'].success {
+  --toast-text: var(--success-re-text);
+  --toast-bg: var(--success-re-bg);
+  --toast-border: var(--success-re-border);
+}
+
+.toaster .toast[data-rich-colors='true'].info {
+  --toast-text: var(--info-re-text);
+  --toast-bg: var(--info-re-bg);
+  --toast-border: var(--info-re-border);
+}
+
+.toaster .toast[data-rich-colors='true'].warning {
+  --toast-text: var(--warning-re-text);
+  --toast-bg: var(--warning-re-bg);
+  --toast-border: var(--warning-re-border);
+}
+
+.toaster .toast[data-rich-colors='true'].error {
+  --toast-text: var(--error-re-text);
+  --toast-bg: var(--error-re-bg);
+  --toast-border: var(--error-re-border);
+}
+
+/* ----- Restyle Sonner Toast ----- */
+
+.toaster .toast {
+  background: var(--toast-bg) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  color: var(--toast-text) !important;
+}
+
+.toaster .toast {
+  border-color: var(--normal-re-border) !important;
+}
+
+.toaster .toast.success {
+  border-color: var(--success-re-border) !important;
+}
+
+.toaster .toast.info {
+  border-color: var(--info-re-border) !important;
+}
+
+.toaster .toast.warning {
+  border-color: var(--warning-re-border) !important;
+}
+
+.toaster .toast.error {
+  border-color: var(--error-re-border) !important;
+}
+
+/* ----- Restyle Sonner Toast Icon ----- */
+
+.toaster .toast .icon {
+  color: var(--normal-re-text) !important;
+}
+
+.toaster .toast.success .icon {
+  color: var(--success-re-text) !important;
+}
+
+.toaster .toast.info .icon {
+  color: var(--info-re-text) !important;
+}
+
+.toaster .toast.warning .icon {
+  color: var(--warning-re-text) !important;
+}
+
+.toaster .toast.error .icon {
+  color: var(--error-re-text) !important;
+}
+
+/* ----- Restyle Sonner Toast Content ----- */
+
+.toaster .toast .title {
+  color: inherit !important;
+}
+
+.toaster .toast .description {
+  color: inherit !important;
+}
+
+/* ----- Restyle Sonner Toast Close Buttons ----- */
+
+.toaster .toast .closeBtn,
+.toaster .toast .closeBtn:hover,
+.toaster .toast .closeBtn:focus {
+  background: inherit !important;
+  border-color: inherit !important;
+  color: inherit !important;
+}
+
+/* ----- Restyle Sonner Toast Cancel Buttons ----- */
+
+.toaster .toast .cancelBtn,
+.toaster .toast .cancelBtn:hover,
+.toaster .toast .cancelBtn:focus {
+  background: transparent !important;
+  color: inherit !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+.toaster .toast .cancelBtn,
+.toaster .toast .cancelBtn:hover,
+.toaster .toast .cancelBtn:focus {
+  border-color: var(--normal-re-text) !important;
+}
+
+.toaster .toast.success .cancelBtn,
+.toaster .toast.success .cancelBtn:hover,
+.toaster .toast.success .cancelBtn:focus {
+  border-color: var(--success-re-text) !important;
+}
+
+.toaster .toast.info .cancelBtn,
+.toaster .toast.info .cancelBtn:hover,
+.toaster .toast.info .cancelBtn:focus {
+  border-color: var(--info-re-text) !important;
+}
+
+.toaster .toast.warning .cancelBtn,
+.toaster .toast.warning .cancelBtn:hover,
+.toaster .toast.warning .cancelBtn:focus {
+  border-color: var(--warning-re-text) !important;
+}
+
+.toaster .toast.error .cancelBtn,
+.toaster .toast.error .cancelBtn:hover,
+.toaster .toast.error .cancelBtn:focus {
+  border-color: var(--error-re-text) !important;
+}
+
+/* ----- Restyle Sonner Toast Action Buttons ----- */
+
+.toaster .toast .actionBtn,
+.toaster .toast .actionBtn:hover,
+.toaster .toast .actionBtn:focus {
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+.toaster .toast .actionBtn,
+.toaster .toast .actionBtn:hover,
+.toaster .toast .actionBtn:focus {
+  background: var(--normal-re-text) !important;
+  color: var(--normal-re-bg) !important;
+  border-color: var(--normal-re-text) !important;
+}
+
+.toaster .toast.success .actionBtn,
+.toaster .toast.success .actionBtn:hover,
+.toaster .toast.success .actionBtn:focus {
+  background: var(--success-re-text) !important;
+  color: var(--success-re-bg) !important;
+  border-color: var(--success-re-text) !important;
+}
+
+.toaster .toast.info .actionBtn,
+.toaster .toast.info .actionBtn:hover,
+.toaster .toast.info .actionBtn:focus {
+  background: var(--info-re-text) !important;
+  color: var(--info-re-bg) !important;
+  border-color: var(--info-re-text) !important;
+}
+
+.toaster .toast.warning .actionBtn,
+.toaster .toast.warning .actionBtn:hover,
+.toaster .toast.warning .actionBtn:focus {
+  background: var(--warning-re-text) !important;
+  color: var(--warning-re-bg) !important;
+  border-color: var(--warning-re-text) !important;
+}
+
+.toaster .toast.error .actionBtn,
+.toaster .toast.error .actionBtn:hover,
+.toaster .toast.error .actionBtn:focus {
+  background: var(--error-re-text) !important;
+  color: var(--error-re-bg) !important;
+  border-color: var(--error-re-text) !important;
+}
+
+/* ----- Align Sonner Toast Action and Cancel Buttons ----- */
+
+.toaster .toast .cancelBtn,
+.toaster .toast .actionBtn {
+  margin-left: auto !important;
+}
+
+.toaster .toast .cancelBtn ~ .actionBtn:last-child {
+  margin-left: 0 !important;
+}
