@@ -26,7 +26,7 @@ export function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
             <Button variant="outline" size="sm" asChild className="sm:px-3">
               <a
-                href="https://github.com"
+                href="https://github.com/Tyran169/restyled-sonner-toast-web"
                 target="_blank"
                 rel="noopener noreferrer"
               >
