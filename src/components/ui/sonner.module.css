@@ -1,5 +1,21 @@
-/* ----- Global Variable Declarations ----- */
+/*
+ * Restyled Sonner Toast
+ * ---------------------
+ * A small set of CSS overrides to refine Sonner's default toast styles.
+ * Designed to work with Sonner's default markup and class names.
+ *
+ * Features:
+ * - Theme-aware (light / dark)
+ * - Optional richColors support
+ * - Improved button styling
+ * - Minimal overrides
+ */
 
+/* ====================================== */
+/*      Global Variable Declarations      */
+/* ====================================== */
+
+/* -- Light theme and inverted toasts in dark theme -- */
 .toaster,
 .toaster[data-sonner-theme='light'],
 .toaster[data-sonner-theme='dark'] .toast[data-invert='true'] {
@@ -24,6 +40,7 @@
   --error-re-text: hsl(360, 100%, 45%);
 }
 
+/* -- Dark theme and inverted toasts in light theme -- */
 .toaster[data-sonner-theme='dark'],
 .toaster[data-sonner-theme='light'] .toast[data-invert='true'] {
   --normal-re-bg: hsl(0, 0%, 8%);
@@ -77,9 +94,12 @@
   --toast-border: var(--error-re-border);
 }
 
-/* ----- Restyle Sonner Toast ----- */
+/* ============================== */
+/*      Restyle Sonner Toast      */
+/* ============================== */
 
-.toaster .toast {
+/* -- Contextual border color for toasts when richColors is false -- */
+/* .toaster .toast {
   background: var(--toast-bg) !important;
   border-width: 1px !important;
   border-style: solid !important;
@@ -104,9 +124,18 @@
 
 .toaster .toast.error {
   border-color: var(--error-re-border) !important;
+} */
+
+/* -- Default border color for toasts when richColors is false -- */
+.toaster .toast {
+  background: var(--toast-bg) !important;
+  border: 1px solid var(--toast-border) !important;
+  color: var(--toast-text) !important;
 }
 
-/* ----- Restyle Sonner Toast Icon ----- */
+/* =================================== */
+/*      Restyle Sonner Toast Icon      */
+/* =================================== */
 
 .toaster .toast .icon {
   color: var(--normal-re-text) !important;
@@ -128,7 +157,9 @@
   color: var(--error-re-text) !important;
 }
 
-/* ----- Restyle Sonner Toast Content ----- */
+/* ====================================== */
+/*      Restyle Sonner Toast Content      */
+/* ====================================== */
 
 .toaster .toast .title {
   color: inherit !important;
@@ -138,7 +169,9 @@
   color: inherit !important;
 }
 
-/* ----- Restyle Sonner Toast Close Buttons ----- */
+/* ============================================ */
+/*      Restyle Sonner Toast Close Buttons      */
+/* ============================================ */
 
 .toaster .toast .closeBtn,
 .toaster .toast .closeBtn:hover,
@@ -148,9 +181,12 @@
   color: inherit !important;
 }
 
-/* ----- Restyle Sonner Toast Cancel Buttons ----- */
+/* ============================================= */
+/*      Restyle Sonner Toast Cancel Buttons      */
+/* ============================================= */
 
-.toaster .toast .cancelBtn,
+/* -- Contextual color for cancel buttons when richColors is false -- */
+/* .toaster .toast .cancelBtn,
 .toaster .toast .cancelBtn:hover,
 .toaster .toast .cancelBtn:focus {
   background: transparent !important;
@@ -187,11 +223,23 @@
 .toaster .toast.error .cancelBtn:hover,
 .toaster .toast.error .cancelBtn:focus {
   border-color: var(--error-re-text) !important;
+} */
+
+/* -- Default color for cancel buttons when richColors is false -- */
+.toaster .toast .cancelBtn,
+.toaster .toast .cancelBtn:hover,
+.toaster .toast .cancelBtn:focus {
+  background: transparent !important;
+  color: inherit !important;
+  border: 1px solid var(--toast-text) !important;
 }
 
-/* ----- Restyle Sonner Toast Action Buttons ----- */
+/* ============================================= */
+/*      Restyle Sonner Toast Action Buttons      */
+/* ============================================= */
 
-.toaster .toast .actionBtn,
+/* -- Contextual color for action buttons when richColors is false -- */
+/* .toaster .toast .actionBtn,
 .toaster .toast .actionBtn:hover,
 .toaster .toast .actionBtn:focus {
   border-width: 1px !important;
@@ -236,9 +284,20 @@
   background: var(--error-re-text) !important;
   color: var(--error-re-bg) !important;
   border-color: var(--error-re-text) !important;
+} */
+
+/* -- Default color for action buttons when richColors is false -- */
+.toaster .toast .actionBtn,
+.toaster .toast .actionBtn:hover,
+.toaster .toast .actionBtn:focus {
+  background: var(--toast-text) !important;
+  color: var(--toast-bg) !important;
+  border: 1px solid var(--toast-text) !important;
 }
 
-/* ----- Align Sonner Toast Action and Cancel Buttons ----- */
+/* ====================================================== */
+/*      Align Sonner Toast Action and Cancel Buttons      */
+/* ====================================================== */
 
 .toaster .toast .cancelBtn,
 .toaster .toast .actionBtn {
